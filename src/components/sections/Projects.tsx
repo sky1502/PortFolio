@@ -17,28 +17,12 @@ export const Projects = () => {
   });
 
   return (
-    <section ref={ref} id="project" className="py-12 relative overflow-hidden">
-      <motion.div
-        className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-fuchsia-500/8 to-cyan-500/8 rounded-full blur-3xl"
-        animate={
-          isInView
-            ? {
-                scale: [1.2, 1, 1.2],
-                rotate: [360, 180, 0],
-              }
-            : {
-                scale: 1.2,
-                rotate: 360,
-              }
-        }
-        transition={{
-          duration: 25,
-          repeat: isInView ? Infinity : 0,
-          ease: "linear",
-        }}
-      />
-
-      <div className="mx-auto px-4 lg:px-8 relative z-10">
+    <section
+      ref={ref}
+      id="project"
+      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+    >
+      <div className="mx-auto px-4 lg:px-8 relative">
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -65,11 +49,7 @@ export const Projects = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
-              animate={
-                isInView
-                  ? { opacity: 1, y: 0 }
-                  : { opacity: 0, y: 50 }
-              }
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{
                 duration: 0.6,
                 delay: index * 0.1,
@@ -78,12 +58,12 @@ export const Projects = () => {
               }}
             >
               <ProjectCard
+                index={index}
                 title={proj.name}
                 desc={proj.description}
-                git={proj.github_link}
-                hostedAt={proj.demo}
+                github={proj.github_link}
+                demo={proj.demo}
                 tech={proj.tech}
-                index={index}
               />
             </motion.div>
           ))}

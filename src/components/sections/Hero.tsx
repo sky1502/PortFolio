@@ -18,7 +18,10 @@ export const Hero = () => {
   });
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-start px-6 relative overflow-hidden">
+    <section
+      ref={ref}
+      className="min-h-screen flex items-center justify-start px-6 relative overflow-hidden"
+    >
       <motion.div
         className="absolute bottom-20 left-20 w-24 h-24 rounded-full bg-violet/10 blur-xl"
         animate={
@@ -39,7 +42,7 @@ export const Hero = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+      <div className="max-w-full sm:max-w-7xl mx-auto w-full relative z-10 overflow-x-hidden">
         <motion.div
           className="max-w-4xl space-y-8"
           initial={{ opacity: 0, y: 50 }}

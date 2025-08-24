@@ -1,218 +1,91 @@
 import Link from "next/link";
-import { FC, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { FC } from "react";
+import { motion } from "framer-motion";
 
-import { Clip } from "../common";
+import { Card } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { FaGithub } from "react-icons/fa6";
+import { FiExternalLink } from "react-icons/fi";
 
 interface ProjectCardProps {
+  index: number;
   title: string;
   desc: string;
-  git: string;
-  hostedAt?: string;
+  github: string;
+  demo?: string;
   tech: string[];
-  index?: number;
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
+  index,
   title,
   desc,
-  git,
-  hostedAt,
+  github,
+  demo,
   tech,
-  index = 0,
 }) => {
-  const ref = useRef(null);
-
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "0px 100px -50px 0px",
-    amount: 0.1,
-  });
-
   return (
     <motion.div
-      ref={ref}
-      className="h-full flex flex-col bg-gradient-to-br from-secondary/10 to-accent/5 backdrop-blur-sm border border-primary/20 rounded-xl overflow-hidden"
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
-      animate={
-        isInView
-          ? {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }
-          : {
-              opacity: 0,
-              y: 50,
-              scale: 0.9,
-            }
-      }
-      transition={{
-        duration: 0.6,
-        delay: index * 0.2,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
-        transition: { duration: 0.3, ease: "easeOut" },
-      }}
-      style={{
-        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-      }}
+      key={title}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -5 }}
+      className="group h-full"
     >
-      {/* Header */}
-      <div className="p-6 pb-2">
-        <motion.h3
-          className="text-xl font-semibold text-primary mb-3 leading-tight"
-          initial={{ opacity: 0, x: -20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.3 + index * 0.2,
-            ease: "easeOut",
-          }}
-        >
-          {title}
-        </motion.h3>
-        <motion.p
-          className="text-xs text-secondary-foreground/80 leading-relaxed"
-          initial={{ opacity: 0, x: -20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4 + index * 0.2,
-            ease: "easeOut",
-          }}
-        >
-          {desc}
-        </motion.p>
-      </div>
+      <Card className="overflow-hidden bg-glass-bg border-glass-border transition-all duration-300 h-full flex flex-col">
+        <div className="p-4 flex flex-col flex-grow">
+          <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+          <p className="text-gray-400 text-sm mb-4 flex-grow">{desc}</p>
 
-      {/* Tech Stack */}
-      <div className="px-6 pb-2 flex-grow flex flex-col justify-start">
-        <motion.div
-          className="flex gap-2 flex-wrap"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{
-            duration: 0.4,
-            delay: 0.5 + index * 0.2,
-          }}
-        >
-          {tech.map((t, chipIndex) => (
-            <motion.div
-              key={chipIndex}
-              className="flex-shrink-0"
-              initial={{ opacity: 0, scale: 0, rotate: -10 }}
-              animate={
-                isInView
-                  ? {
-                      opacity: 1,
-                      scale: 1,
-                      rotate: 0,
-                    }
-                  : {
-                      opacity: 0,
-                      scale: 0,
-                      rotate: -10,
-                    }
-              }
-              transition={{
-                duration: 0.4,
-                delay: 0.6 + index * 0.2 + chipIndex * 0.1,
-                ease: "backOut",
-                scale: { type: "spring", stiffness: 300, damping: 20 },
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 2,
-                transition: { duration: 0.2 },
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Clip name={t} px="3" />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Footer Links */}
-      <motion.div
-        className="py-4 mx-6 mt-2 border-t border-primary/70"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{
-          duration: 0.5,
-          delay: 0.8 + index * 0.2,
-          ease: "easeOut",
-        }}
-      >
-        <div className="flex items-center gap-4">
-          <motion.div
-            initial={{ opacity: 0, x: -10 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-            transition={{
-              duration: 0.4,
-              delay: 0.9 + index * 0.2,
-            }}
-            whileHover={{
-              x: 4,
-              transition: { type: "spring", stiffness: 400, damping: 25 },
-            }}
-          >
-            <Link
-              href={git}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-primary/90 hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline"
-            >
-              View Code
-            </Link>
-          </motion.div>
-
-          {hostedAt && (
-            <>
-              <motion.div
-                className="w-px h-4 bg-primary/80"
-                initial={{ scaleY: 0, opacity: 0 }}
-                animate={
-                  isInView
-                    ? { scaleY: 1, opacity: 1 }
-                    : { scaleY: 0, opacity: 0 }
-                }
-                transition={{
-                  duration: 0.3,
-                  delay: 1.0 + index * 0.2,
-                }}
-              />
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
-                }
-                transition={{
-                  duration: 0.4,
-                  delay: 1.1 + index * 0.2,
-                }}
-                whileHover={{
-                  x: 4,
-                  transition: { type: "spring", stiffness: 400, damping: 25 },
-                }}
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {tech.map((tech) => (
+              <Badge
+                key={tech}
+                variant="outline"
+                className="text-xs border-white/20 text-gray-300"
               >
-                <Link
-                  href={hostedAt}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-primary/90 hover:text-primary transition-colors duration-200 underline-offset-4 hover:underline"
-                >
-                  Live Demo
+                {tech}
+              </Badge>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <motion.div
+            className="flex space-x-3 mt-auto"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1 bg-white/10 border-white/20 hover:bg-white/20 hover:border-white/30"
+              asChild
+            >
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                <FaGithub className="w-4 h-4 mr-2" />
+                Code
+              </a>
+            </Button>
+            {demo && (
+              <Button
+                size="sm"
+                className="flex-1 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600"
+                asChild
+              >
+                <Link href={demo} target="_blank" rel="noopener noreferrer">
+                  <FiExternalLink className="w-4 h-4 mr-2" />
+                  Demo
                 </Link>
-              </motion.div>
-            </>
-          )}
+              </Button>
+            )}
+          </motion.div>
         </div>
-      </motion.div>
+      </Card>
     </motion.div>
   );
 };

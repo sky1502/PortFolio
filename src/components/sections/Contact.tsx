@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { IconType } from "react-icons";
 
 import { FaInstagram } from "react-icons/fa6";
@@ -10,13 +10,25 @@ import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { selfData } from "@/constant";
 import { nasalization } from "@/app/fonts";
 import { ContactFormCard, ContactSocials } from "@/components/Cards";
+import { useRef } from "react";
 
 export const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: false,
+    margin: "-100px",
+    amount: 0.2,
+  });
+
   return (
-    <section id="contact">
+    <section
+      ref={ref}
+      id="contact"
+      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+    >
       <div className="mb-8">
         <div className="max-w-6xl mx-auto backdrop:blur-xl rounded-lg">
-          <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4">
+          <div className="grid md:grid-cols-2 items-center gap-16">
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}

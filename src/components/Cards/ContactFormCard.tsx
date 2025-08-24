@@ -93,7 +93,7 @@ export const ContactFormCard = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: 100 }}
       transition={{ duration: 0.5 }}
-      className="bg-slate-400 bg-opacity-10 border-2 text-gray-950 border-slate-200 shadow-inner shadow-slate-800 p-4 rounded-lg max-w-md mx-auto"
+      className="bg-slate-400 bg-opacity-10 border-2 text-gray-950 border-slate-200 shadow-inner shadow-slate-800 p-4 rounded-lg mx-auto"
     >
       <form onSubmit={sendEmail} className="space-y-3">
         <motion.input

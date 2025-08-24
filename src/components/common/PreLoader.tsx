@@ -4,6 +4,7 @@ import { nasalization } from "@/app/fonts";
 import { selfData } from "@/constant";
 import { motion, AnimatePresence } from "framer-motion";
 import { FC, useState, useEffect } from "react";
+import { Background } from "./Background";
 
 interface H1ComponentProps {
   name: string;
@@ -39,19 +40,13 @@ export const PreLoader = () => {
     <AnimatePresence>
       {showPreloader && (
         <motion.div
-          className="overflow-x-hidden w-screen h-screen fixed inset-0 z-50"
+          className="overflow-x-hidden w-full h-screen fixed inset-0 z-50"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           <div className="flex items-center justify-center fixed h-full w-full">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
-            />
+            <Background />
 
             <motion.div
               className="flex justify-center items-center tracking-widest mx-auto container text-2xl text-slate-400"

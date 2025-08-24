@@ -97,6 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>{`${metadata.title}`}</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

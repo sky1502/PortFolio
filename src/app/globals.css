@@ -14,58 +14,156 @@ body {
 
 @layer base {
   :root {
-    --background: 240 5.2632% 7.451%;
-    --foreground: 240 5.0279% 64.902%;
-    --card: 240 5.8824% 10%;
-    --card-foreground: 240 4.7619% 95.8824%;
-    --popover: 240 5.8824% 10%;
-    --popover-foreground: 240 4.7619% 95.8824%;
-    --primary: 293.4104 69.4779% 48.8235%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 271.4754 81.3333% 55.8824%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 240 3.7037% 15.8824%;
-    --muted-foreground: 240 3.8298% 46.0784%;
-    --accent: 273.5484 86.9159% 20.9804%;
-    --accent-foreground: 276.3158 100% 92.549%;
-    --destructive: 0 62.8205% 30.5882%;
-    --destructive-foreground: 210 40% 98.0392%;
-    --border: 240 4.5455% 17.2549%;
-    --input: 240 4.5455% 17.2549%;
-    --ring: 292.1893 84.0796% 60.5882%;
-    --chart-1: 293.4104 69.4779% 48.8235%;
-    --chart-2: 271.4754 81.3333% 55.8824%;
-    --chart-3: 272.093 71.6667% 47.0588%;
-    --chart-4: 272.8889 67.1642% 39.4118%;
-    --chart-5: 273.6449 65.6442% 31.9608%;
-    --sidebar: 240 5.8824% 10%;
-    --sidebar-foreground: 240 5.0279% 64.902%;
-    --sidebar-primary: 293.4104 69.4779% 48.8235%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 273.5484 86.9159% 20.9804%;
-    --sidebar-accent-foreground: 276.3158 100% 92.549%;
-    --sidebar-border: 240 4.5455% 17.2549%;
-    --sidebar-ring: 292.1893 84.0796% 60.5882%;
-    --radius: 0.5rem;
-    --shadow-2xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
-    --shadow-xs: 0px 2px 4px 0px hsl(0 0% 0% / 0.05);
+    /* Base Colors - Ultra-dark foundation with subtle warmth */
+    --background: 240 15% 2%;
+    --foreground: 220 8% 94%;
+
+    /* Card & Surface Colors - Deep charcoal with luxury undertones */
+    --card: 245 20% 3%;
+    --card-foreground: 220 6% 96%;
+    --popover: 242 25% 2.5%;
+    --popover-foreground: 220 5% 97%;
+
+    /* Primary Colors - Refined platinum with dark contrast */
+    --primary: 220 15% 88%;
+    --primary-foreground: 245 30% 8%;
+    --secondary: 275 60% 45%;
+    --secondary-foreground: 275 10% 95%;
+
+    /* Muted & Neutral Colors - Deep grays with purple undertones */
+    --muted: 240 18% 6%;
+    --muted-foreground: 220 12% 65%;
+
+    /* Accent Colors - Rich amethyst */
+    --accent: 275 70% 55%;
+    --accent-foreground: 275 15% 95%;
+
+    /* Destructive Colors - Deep crimson */
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 10% 96%;
+
+    /* Interactive Elements - Ultra-dark with subtle definition */
+    --border: 240 20% 8%;
+    --input: 242 25% 4%;
+    --ring: 275 60% 60%;
+
+    /* Chart Colors - Dark luxury palette */
+    --chart-1: 220 15% 88%;
+    --chart-2: 275 60% 45%;
+    --chart-3: 195 50% 35%;
+    --chart-4: 315 45% 40%;
+    --chart-5: 45 40% 35%;
+
+    /* Sidebar Components - Deepest blacks with luxury accents */
+    --sidebar: 245 25% 1.5%;
+    --sidebar-foreground: 220 8% 88%;
+    --sidebar-primary: 220 15% 88%;
+    --sidebar-primary-foreground: 245 30% 8%;
+    --sidebar-accent: 275 70% 55%;
+    --sidebar-accent-foreground: 275 15% 95%;
+    --sidebar-border: 240 20% 6%;
+    --sidebar-ring: 275 60% 60%;
+
+    /* Border Radius - Sharp luxury edges */
+    --radius: 0.75rem;
+
+    /* Ultra-Dark Shadow System - Deep, rich shadows */
+    --shadow-2xs: 0px 2px 4px 0px hsl(245 80% 1% / 0.8);
+    --shadow-xs: 0px 2px 4px 0px hsl(245 80% 1% / 0.8);
     --shadow-sm:
-      0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+      0px 3px 6px 0px hsl(245 70% 1% / 0.9),
+      0px 1px 3px -1px hsl(275 40% 25% / 0.2);
     --shadow:
-      0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+      0px 3px 6px 0px hsl(245 70% 1% / 0.9),
+      0px 1px 3px -1px hsl(275 40% 25% / 0.2);
     --shadow-md:
-      0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 2px 4px -1px hsl(0 0% 0% / 0.1);
+      0px 4px 8px 0px hsl(245 70% 1% / 0.95),
+      0px 2px 4px -1px hsl(275 40% 25% / 0.25);
     --shadow-lg:
-      0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 4px 6px -1px hsl(0 0% 0% / 0.1);
+      0px 6px 12px 0px hsl(245 70% 0.5% / 1),
+      0px 4px 8px -2px hsl(275 40% 25% / 0.3);
     --shadow-xl:
-      0px 2px 4px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px hsl(0 0% 0% / 0.1);
-    --shadow-2xl: 0px 2px 4px 0px hsl(0 0% 0% / 0.25);
-    --tracking-normal: 0rem;
+      0px 8px 16px 0px hsl(245 80% 0.5% / 1),
+      0px 6px 12px -3px hsl(275 40% 25% / 0.35);
+    --shadow-2xl:
+      0px 12px 24px 0px hsl(245 90% 0% / 1),
+      0px 4px 8px 0px hsl(275 50% 30% / 0.4);
+
+    /* Dark Glass Effects - Obsidian-like surfaces */
+    --glass-bg: hsl(245 30% 3% / 0.85);
+    --glass-border: hsl(275 40% 35% / 0.4);
+    --glass-glow: 0px 0px 24px hsl(275 60% 45% / 0.3);
+
+    /* Dark Luxury Gradient - Mysterious depth */
+    --luxury-gradient: linear-gradient(
+      135deg,
+      hsl(275 60% 25% / 0.15) 0%,
+      hsl(245 40% 15% / 0.08) 25%,
+      hsl(220 30% 20% / 0.06) 50%,
+      hsl(300 45% 20% / 0.12) 75%,
+      hsl(275 60% 25% / 0.18) 100%
+    );
+
+    /* Enhanced Dark Hover States */
+    --hover-primary: 220 20% 92%;
+    --hover-secondary: 275 65% 50%;
+    --hover-accent: 275 75% 60%;
+
+    /* Dark Premium Typography Effects */
+    --text-glow: 0px 0px 16px hsl(275 60% 60% / 0.5);
+    --text-shadow-luxury:
+      0px 2px 6px hsl(245 100% 0% / 1), 0px 0px 12px hsl(275 40% 35% / 0.3);
+
+    /* Enhanced Dark Spacing */
+    --tracking-normal: 0.05rem;
     --spacing: 0.25rem;
+
+    /* Additional Dark Premium Variables */
+    --shimmer: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(275 60% 45% / 0.15) 50%,
+      transparent 100%
+    );
+
+    --premium-border: 1px solid hsl(275 30% 25% / 0.3);
+    --luxury-hover-glow: 0px 0px 20px hsl(275 60% 45% / 0.4);
+
+    /* Dark Status Colors - Muted but visible */
+    --success: 145 40% 35%;
+    --success-foreground: 145 10% 92%;
+    --warning: 35 50% 40%;
+    --warning-foreground: 35 8% 94%;
+    --info: 200 45% 40%;
+    --info-foreground: 200 8% 94%;
+
+    /* Ultra-Dark Variants for Maximum Contrast */
+    --void: 245 30% 0.5%;
+    --abyss: 240 40% 1%;
+    --obsidian: 245 25% 2%;
+
+    /* Luxury Metal Accents */
+    --platinum: 220 15% 88%;
+    --silver: 220 10% 75%;
+    --gunmetal: 240 15% 15%;
+
+    /* Neon Accent for High Contrast Elements */
+    --neon-purple: 275 100% 70%;
+    --neon-glow: 0px 0px 20px hsl(275 100% 70% / 0.6);
+
+    /* Dark Mode Specific Enhancements */
+    --card-hover: 245 22% 4%;
+    --button-ghost: transparent;
+    --button-ghost-hover: hsl(275 30% 20% / 0.1);
+
+    /* Deep Focus States */
+    --focus-ring: 2px solid hsl(275 60% 55%);
+    --focus-glow: 0px 0px 0px 4px hsl(275 60% 45% / 0.2);
   }
 
   body {
     letter-spacing: var(--tracking-normal);
+    overflow-x: hidden;
   }
 }
 
@@ -99,11 +197,11 @@ body {
   .will-change-transform {
     will-change: transform;
   }
-  
+
   .will-change-opacity {
     will-change: opacity;
   }
-  
+
   .gpu-accelerated {
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -152,7 +250,8 @@ body {
 
   /* Floating orb animations */
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
     50% {
@@ -182,7 +281,8 @@ body {
 
   /* Pulse effect */
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.5;
       transform: scale(1);
     }
@@ -202,19 +302,19 @@ body {
     .marquee-infinite {
       animation: none;
     }
-    
+
     .floating-orb {
       animation: none;
     }
-    
+
     .loading-spinner {
       animation: none;
     }
-    
+
     .pulse-animation {
       animation: none;
     }
-    
+
     * {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;

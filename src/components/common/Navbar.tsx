@@ -41,12 +41,12 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ease-out border-primary/30 ${
+      className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${
         isScrolled ? "pt-0 px-2 sm:px-4" : "px-2 sm:px-2"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div
-        className={`floating-nav rounded-2xl px-4 sm:px-6 py-3 transition-all duration-300 max-w-7xl mx-auto ${
+        className={`floating-nav rounded-2xl px-4 sm:px-6 py-3 bg-glass-bg transition-all duration-300 max-w-7xl mx-auto ${
           isScrolled ? "shadow-xl" : "shadow-lg"
         }`}
       >
@@ -55,7 +55,7 @@ export const Navbar = () => {
             href="/"
             className="flex items-center space-x-2 sm:space-x-3 group"
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-violet to-fuchsia flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-glass-bg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <Image
                 src="/images/logo.svg"
                 alt="logo"

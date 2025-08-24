@@ -54,9 +54,9 @@ export const Footer = () => {
       />
       <div className="absolute inset-0 bg-background/30" />
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none w-full max-w-full">
         <motion.div
-          className="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-20"
+          className="absolute -top-4 -right-4 sm:-top-10 sm:-right-10 md:-top-20 md:-right-20 w-20 sm:w-32 md:w-40 h-20 sm:h-32 md:h-40 rounded-full opacity-20 max-w-full max-h-full"
           style={{
             background:
               "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)",
@@ -65,7 +65,7 @@ export const Footer = () => {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full opacity-15"
+          className="absolute -bottom-4 -left-4 sm:-bottom-10 sm:-left-10 md:-bottom-20 md:-left-20 w-20 sm:w-32 md:w-40 h-20 sm:h-32 md:h-40 rounded-full opacity-15 max-w-full max-h-full"
           style={{
             background:
               "radial-gradient(circle, hsl(var(--secondary)) 0%, transparent 70%)",
@@ -75,7 +75,7 @@ export const Footer = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 lg:px-6 py-6">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-6 py-6 overflow-x-hidden">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center space-x-3">
             <motion.span

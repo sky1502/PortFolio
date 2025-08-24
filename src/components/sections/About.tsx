@@ -17,7 +17,10 @@ export const About = () => {
   });
 
   return (
-    <section ref={ref} className="py-24 relative overflow-hidden">
+    <section
+      ref={ref}
+      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+    >
       {/* Animated Background Blob */}
       <motion.div
         className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"

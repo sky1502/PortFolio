@@ -4,7 +4,15 @@ const nextConfig: NextConfig = {
   // Enable static exports for better SEO performance
   images: {
     unoptimized: false, // Keep image optimization enabled
-    domains: ["aarab.vercel.app"],
+    // domains: ["aarab.vercel.app"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "aarab.vercel.app",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 
   // Compress responses

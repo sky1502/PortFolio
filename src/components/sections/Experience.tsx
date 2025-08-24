@@ -1,41 +1,47 @@
 "use client";
 
-import { motion } from "motion/react";
-
-import { nasalization } from "@/app/fonts";
-import { ExperienceCard } from "@/components/Cards";
+import { motion } from "framer-motion";
+import { Card } from "../ui/card";
+import { FaBriefcase } from "react-icons/fa6";
 import { experienceData } from "@/constant";
+import { ExperienceCard } from "../Cards";
 
-export const Experience = () => {
+export function Experience() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <motion.h2
-            className={`${nasalization.className} text-4xl font-bold text-primary`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
+    <section
+      id="experience"
+      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+    >
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">
             Experience
-          </motion.h2>
-        </div>
+          </h2>
+        </motion.div>
 
-        <div className="space-y-12">
-          {experienceData.map((exp, i) => (
-            <ExperienceCard
-              key={i}
-              role={exp.role}
-              year={exp.year}
-              description={exp.description}
-              company={exp.company}
-              technologies={exp.technologies}
-              url={exp.url}
-            />
-          ))}
+        <div className="relative">
+          <div className="space-y-12 px-4">
+            {experienceData.map((exp, index) => (
+              <ExperienceCard
+                key={index}
+                role={exp.role}
+                year={exp.year}
+                description={exp.description}
+                company={exp.company}
+                technologies={exp.technologies}
+                url={exp.url}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}
