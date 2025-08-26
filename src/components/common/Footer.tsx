@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { TbHeart, TbHeartFilled } from "react-icons/tb";
 import { LuGithub, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
 
-import { quentin } from "@/app/fonts";
+import { quentine } from "@/app/fonts";
 import { selfData } from "@/constant/";
 import spaceImg from "@/assets/images/space.png";
 
@@ -91,7 +91,7 @@ export const Footer = () => {
               />
             </motion.span>
             <h3
-              className={`${quentin.className} text-2xl font-semibold text-primary`}
+              className={`${quentine.className} text-2xl font-semibold text-primary`}
             >
               Aarab Nishchal
             </h3>

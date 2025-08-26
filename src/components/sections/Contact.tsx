@@ -1,24 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { IconType } from "react-icons";
+import { useRef } from "react";
 
-import { FaInstagram } from "react-icons/fa6";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 
 import { selfData } from "@/constant";
 import { nasalization } from "@/app/fonts";
 import { ContactFormCard, ContactSocials } from "@/components/Cards";
-import { useRef } from "react";
 
 export const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {
-    once: false,
-    margin: "-100px",
-    amount: 0.2,
-  });
 
   return (
     <section
@@ -26,56 +20,60 @@ export const Contact = () => {
       id="contact"
       className="py-24 max-w-6xl mx-auto relative overflow-hidden"
     >
-      <div className="mb-8">
-        <div className="max-w-6xl mx-auto backdrop:blur-xl rounded-lg">
-          <div className="grid md:grid-cols-2 items-center gap-16">
-            <div>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className={`${nasalization.className} text-4xl font-bold text-primary`}
+      <div className="px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-center mb-16"
+        >
+          <motion.h2
+            className={`text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 relative ${nasalization.className}`}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            style={{ color: "hsl(var(--primary))" }}
+          >
+            Let&apos;s Connect
+          </motion.h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Contact Form */}
+          <ContactFormCard />
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            {/* Contact List */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="space-y-4"
+            >
+              <h3
+                className="text-xl md:text-2xl font-semibold mb-6 font-mono"
+                style={{ color: "hsl(var(--foreground))" }}
               >
-                Contact Me
-              </motion.h2>
-              <motion.p
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="text-sm text-slate-300 mt-3"
+                Get In Touch
+              </h3>
+              <ContactList />
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              <h3
+                className="text-xl md:text-2xl font-semibold mb-6 font-mono"
+                style={{ color: "hsl(var(--foreground))" }}
               >
-                Open to any adventure that involves learning and making cool
-                stuff!
-              </motion.p>
-
-              <ul className="mt-12 space-y-8">
-                <ContactList
-                  Icon={IoMailOutline}
-                  link={`mailto:${selfData.email}`}
-                  text={selfData.email}
-                  initial={-25}
-                />
-
-                <ContactList
-                  Icon={FaInstagram}
-                  link={`https://instagram.com/${selfData.socials_username.instagram}`}
-                  text={`@${selfData.socials_username.instagram}`}
-                  initial={25}
-                />
-
-                <ContactList
-                  Icon={IoLocationOutline}
-                  link={`https://www.google.com/maps/place/${selfData.current_location.city}+${selfData.current_location.state}+${selfData.current_location.country}`}
-                  text={`${selfData.current_location.city}, ${selfData.current_location.state}, ${selfData.current_location.country}`}
-                  initial={-25}
-                />
-              </ul>
-
+                Socials . . .
+              </h3>
               <ContactSocials />
-            </div>
-
-            <ContactFormCard />
+            </motion.div>
           </div>
         </div>
       </div>
@@ -83,35 +81,71 @@ export const Contact = () => {
   );
 };
 
-export const ContactList = ({
-  Icon,
-  link,
-  text,
-  initial,
-}: {
-  Icon: IconType;
-  link: string;
-  text: string;
-  initial: number;
+interface ContactItemProps {
+  icon: IconType;
+  label: string;
+  value: string;
+  href?: string;
+}
+
+const ContactItem: React.FC<ContactItemProps> = ({
+  icon: Icon,
+  label,
+  value,
+  href,
 }) => {
-  return (
-    <motion.li
-      whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: initial }}
-      transition={{ duration: 0.5 }}
-      whileHover={{
-        scale: 1.1,
-      }}
+  const content = (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="glass-card p-4 rounded-xl transition-all duration-300 hover:glass-intense group cursor-pointer"
     >
-      <Link
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center"
-      >
-        <Icon className="text-slate-300 w-6 h-6" />
-        <span className="text-slate-300 font-medium text-md ml-3">{text}</span>
+      <div className="flex items-center space-x-4">
+        <motion.div
+          className="p-3 rounded-lg"
+          style={{ backgroundColor: "hsl(var(--primary) / 0.2)" }}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+        >
+          <Icon className="w-6 h-6" style={{ color: "hsl(var(--primary))" }} />
+        </motion.div>
+        <div className="flex-1">
+          <p className="text-sm text-muted/80 mb-1">{label}</p>
+          <p className="font-medium group-hover:text-primary transition-colors duration-300">
+            {value}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className="block">
+        {content}
       </Link>
-    </motion.li>
+    );
+  }
+
+  return content;
+};
+
+const ContactList = () => {
+  return (
+    <div className="space-y-4">
+      <ContactItem
+        icon={IoMailOutline}
+        label="Email"
+        value={selfData.email}
+        href={`mailto:${selfData.email}`}
+      />
+      <ContactItem
+        icon={IoLocationOutline}
+        label="Location"
+        value={`${selfData.current_location.city}, ${selfData.current_location.state}, ${selfData.current_location.country}`}
+      />
+    </div>
   );
 };

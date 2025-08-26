@@ -7,9 +7,9 @@ import Link from "next/link";
 
 import { FaHouse, FaArrowLeft } from "react-icons/fa6";
 
-import { Navbar, Footer } from "@/components/common";
+import { Navbar, Footer, Background } from "@/components/common";
 import { Button } from "@/components/ui/button";
-import { quentin, nasalization } from "@/app/fonts";
+import { quentine, nasalization } from "@/app/fonts";
 
 export default function NotFound() {
   const router = useRouter();
@@ -17,37 +17,8 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen relative flex flex-col">
-      {/* Background matching your main design */}
-      <div className="fixed top-0 left-0 -z-10 h-full w-full">
-        <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      </div>
-
-      {/* Animated background elements */}
-      <motion.div
-        className="absolute top-20 right-20 w-32 h-32 rounded-full bg-primary/10 blur-xl"
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      <motion.div
-        className="absolute bottom-20 left-20 w-24 h-24 rounded-full bg-secondary/10 blur-xl"
-        animate={{
-          y: [20, -20, 20],
-          rotate: [360, 180, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+      {/* Background Component */}
+      <Background />
 
       <Fragment>
         <Navbar />
@@ -69,7 +40,7 @@ export default function NotFound() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <h1
-                  className={`${quentin.className} text-7xl md:text-9xl lg:text-[10rem] font-bold text-primary leading-none`}
+                  className={`${quentine.className} text-7xl md:text-9xl lg:text-[10rem] font-bold text-primary leading-none`}
                 >
                   404
                 </h1>

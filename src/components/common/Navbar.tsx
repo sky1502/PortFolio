@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
 
-import { quentin } from "@/app/fonts";
+import { quentine } from "@/app/fonts";
 
 import { Button } from "../ui/button";
 import { createBlurDataURL } from "@/lib/BlurDataURL";
@@ -74,7 +74,7 @@ export const Navbar = () => {
               />
             </div>
             <span
-              className={`${quentin.className} text-primary-foreground text-xl sm:text-base`}
+              className={`${quentine.className} text-primary-foreground text-xl sm:text-base`}
             >
               {selfData.name}
             </span>

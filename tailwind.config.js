@@ -11,6 +11,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'], 
+        nasalization: ['var(--font-nasalization)', 'sans-serif'],
+        quentine: ['var(--font-quentine)', 'serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

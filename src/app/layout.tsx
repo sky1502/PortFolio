@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 
-import { inter } from "./fonts";
+import { inter, mono, nasalization, quentine } from "./fonts";
 
 import { keywords } from "@/constant";
 import {
@@ -117,7 +117,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body 
+        className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} font-sans`} 
+        suppressHydrationWarning={true}
+      >
         {children}
         <Toaster position="bottom-right" richColors closeButton />
       </body>
