@@ -1,5 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
+
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import { Toaster } from "sonner";
 
 import { inter, mono, nasalization, quentine } from "./fonts";
@@ -117,12 +121,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body 
-        className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} font-sans`} 
+      <body
+        className={`${inter.variable} ${mono.variable} ${nasalization.variable} ${quentine.variable} font-sans`}
         suppressHydrationWarning={true}
       >
         {children}
         <Toaster position="bottom-right" richColors closeButton />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
