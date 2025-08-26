@@ -191,22 +191,6 @@ export const ContactFormCard = () => {
         />
 
         <div className="relative z-10 p-4 md:p-6 flex flex-col flex-grow">
-          <motion.h3
-            initial={{ opacity: 0, y: 30, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.2,
-              type: "spring",
-              stiffness: 200,
-              damping: 15,
-            }}
-            className="text-xl md:text-2xl font-semibold mb-4 text-center"
-            style={{ color: "hsl(var(--primary))" }}
-          >
-            Let&apos;s Work Together
-          </motion.h3>
-
           <form onSubmit={sendEmail} className="space-y-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
@@ -292,14 +276,24 @@ export const ContactFormCard = () => {
                   borderColor: "hsl(var(--glass-border))",
                 }}
               >
-                <option value="General inquries">General Inquiries</option>
-                <option value="Project inquiries">Project Inquiries</option>
-                <option value="Collaboration request">
+                <option className="text-black" value="General inquries">
+                  General Inquiries
+                </option>
+                <option className="text-black" value="Project inquiries">
+                  Project Inquiries
+                </option>
+                <option className="text-black" value="Collaboration request">
                   Collaboration Request
                 </option>
-                <option value="Feedback/Question">Feedback/Question</option>
-                <option value="Bug report">Bug Report</option>
-                <option value="Feature request">Feature Request</option>
+                <option className="text-black" value="Feedback/Question">
+                  Feedback/Question
+                </option>
+                <option className="text-black" value="Bug report">
+                  Bug Report
+                </option>
+                <option className="text-black" value="Feature request">
+                  Feature Request
+                </option>
               </select>
             </motion.div>
 

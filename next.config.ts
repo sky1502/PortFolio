@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "X-Frame-Options",
-            value: "DENY",
+            value: "SAMEORIGIN",
           },
           {
             key: "X-Content-Type-Options",
@@ -40,6 +40,24 @@ const nextConfig: NextConfig = {
           {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
+          },
+        ],
+      },
+      // Allow PDFs to be embedded
+      {
+        source: "/docs/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "Content-Type",
+            value: "application/pdf",
+          },
+          {
+            key: "Content-Disposition",
+            value: "inline",
           },
         ],
       },
@@ -61,7 +79,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/directresume",
-        destination: "/docs/MyResume.pdf",
+        destination: "/docs/Aarab_Nishchal_Resume.pdf",
         permanent: true,
       },
     ];
