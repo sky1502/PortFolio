@@ -86,6 +86,7 @@ const nextConfig: NextConfig = {
       {
         source: "/github",
         destination: "www.github.com/aarabii",
+        permanent: true,
       },
     ];
   },
