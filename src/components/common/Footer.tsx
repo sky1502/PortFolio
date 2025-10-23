@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { TbHeart, TbHeartFilled } from "react-icons/tb";
-import { LuGithub, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
 
 import { quentine } from "@/app/fonts";
 import { selfData } from "@/constant/";
