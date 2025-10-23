@@ -227,6 +227,4 @@ export const selfData = {
 
 **Designed by [Aarab Nishchal](https://github.com/aarabii/)**
 
-[![Portfolio]](https://github.com/sky1502/portfolio)
-
 </div>
