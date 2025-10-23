@@ -9,6 +9,8 @@ interface ExperienceCardProps {
   year: string;
   description: Array<string>;
   company: string;
+  companyColor?: string;
+  companyOutlineColor?: string;
   technologies: Array<string>;
   index?: number;
 }
@@ -18,6 +20,8 @@ export const ExperienceCard: FC<ExperienceCardProps> = ({
   year,
   description,
   company,
+  companyColor,
+  companyOutlineColor,
   technologies,
   index = 0,
 }) => {
@@ -101,7 +105,15 @@ export const ExperienceCard: FC<ExperienceCardProps> = ({
                 </h3>
                 <p
                   className="font-medium"
-                  style={{ color: "hsl(var(--secondary))" }}
+                  style={{
+                    color: companyColor ?? "hsl(var(--secondary))",
+                    WebkitTextStroke: companyOutlineColor
+                      ? `0.75px ${companyOutlineColor}`
+                      : undefined,
+                    textShadow: companyOutlineColor
+                      ? `0 0 2px ${companyOutlineColor}`
+                      : undefined,
+                  }}
                 >
                   {company}
                 </p>

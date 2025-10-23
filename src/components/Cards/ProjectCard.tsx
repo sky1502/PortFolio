@@ -15,6 +15,8 @@ interface ProjectCardProps {
   github: string;
   demo?: string;
   tech: string[];
+  titleColor?: string;
+  titleOutlineColor?: string;
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
@@ -24,6 +26,8 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   github,
   demo,
   tech,
+  titleColor,
+  titleOutlineColor,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -90,7 +94,15 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           {/* Card Header Accent */}
           <motion.h3
             className="text-xl font-bold mb-3 mt-2 font-nasalization"
-            style={{ color: "hsl(var(--primary))" }}
+            style={{
+              color: titleColor ?? "hsl(var(--primary))",
+              WebkitTextStroke: titleOutlineColor
+                ? `0.75px ${titleOutlineColor}`
+                : undefined,
+              textShadow: titleOutlineColor
+                ? `0 0 2px ${titleOutlineColor}`
+                : undefined,
+            }}
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}

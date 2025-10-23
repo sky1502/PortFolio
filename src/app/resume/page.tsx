@@ -58,7 +58,7 @@ export default function Resume() {
     isMobile: false,
   });
 
-  const PDF_URL = "/docs/Aarab_Nishchal_Resume.pdf";
+  const PDF_URL = "/docs/Gagan_Singhal_Resume.pdf";
   const MAX_RETRIES = 2;
 
   const ref = useRef(null);

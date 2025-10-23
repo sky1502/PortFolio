@@ -1,20 +1,20 @@
 export const keywords = [
-  "Aarab Nishchal",
-  "Aarab",
-  "Nishchal",
-  "aarabii", // GitHub username
+  "Gagan Singhal",
+  "Gagan",
+  "Singhal",
+  "sky1502", // GitHub username
   "aarab.vercel.app", // Portfolio URL
-  "aarab.nishchal@gmail.com", // Email for search
-  "linkedin/in/aarab-nishchal", // LinkedIn profile
-  "Aarab Nishchal portfolio",
-  "Aarab Nishchal developer",
-  "Aarab Nishchal software engineer",
-  "Aarab Nishchal web developer",
-  "Aarab Nishchal AI developer",
-  "Aarab Nishchal full-stack developer",
-  "Aarab Nishchal projects",
-  "Aarab Nishchal resume",
-  "Aarab Nishchal contact",
+  "gagansinghal06@gmail.com", // Email for search
+  "linkedin/in/gagansinghal06", // LinkedIn profile
+  "Gagan Singhal portfolio",
+  "Gagan Singhal developer",
+  "Gagan Singhal software engineer",
+  "Gagan Singhal web developer",
+  "Gagan Singhal AI developer",
+  "Gagan Singhal full-stack developer",
+  "Gagan Singhal projects",
+  "Gagan Singhal resume",
+  "Gagan Singhal contact",
 
   "student developer portfolio",
   "web developer Bhubaneswar",

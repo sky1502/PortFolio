@@ -16,17 +16,17 @@ import {
 } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  applicationName: "Aarab Nishchal",
-  title: "Aarab Nishchal",
+  applicationName: "Gagan Singhal",
+  title: "Gagan Singhal",
   description:
-    "Aarab Nishchal is a student developer passionate about building modern web apps with Next.js, React, and open-source tools. Explore his projects, experiments, and developer portfolio.",
+    "Gagan Singhal is an AI engineer exploring the space where models, data, and creativity meet. Check out his projects in generative AI, web tools, and real-world systems.",
   authors: [
     {
-      name: "Aarab Nishchal",
+      name: "Gagan Singhal",
       url: "https://aarab.vercel.app",
     },
   ],
-  creator: "Aarab Nishchal",
+  creator: "Gagan Singhal",
   referrer: "origin-when-cross-origin",
   keywords: keywords,
   metadataBase: new URL("https://aarab.vercel.app"),
@@ -63,30 +63,21 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 
   openGraph: {
-    title: "Aarab Nishchal",
+    title: "Gagan Singhal",
     description:
-      "Explore Aarab Nishchal’s portfolio featuring projects in React, Next.js, AI, and developer tools. Discover a world of creative web applications and open-source experiments.",
+      "Explore Gagan Singhal’s portfolio featuring projects in AI, generative systems, and full-stack development. Discover intelligent tools, creative experiments, and real-world applications built at the intersection of code and curiosity.",
     url: "https://aarab.vercel.app",
-    siteName: "Aarab Nishchal",
+    siteName: "Gagan Singhal",
     images: [
       {
         url: "/images/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Aarab Nishchal Portfolio Thumbnail",
+        alt: "Gagan Singhal Portfolio Thumbnail",
       },
     ],
     locale: "en_US",
     type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Aarab Nishchal",
-    description:
-      "Check out Aarab Nishchal’s personal portfolio and dev projects using Next.js, React, Tailwind, and modern web tech.",
-    images: ["/images/thumbnail.png"],
-    creator: "@aarab_ii",
   },
 };
 

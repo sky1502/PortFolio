@@ -1,11 +1,11 @@
-# 🌟 Aarab Nishchal's Portfolio
+# 🌟 Gagan Singhal's Portfolio
 
 <div align="center">
 
   <!-- Logo -->
   <img src="public/images/logo.svg" alt="Portfolio Logo" width="120" height="120">
 
-### ✨ Student Developer | Chief Problem Solver | Solution Sorcerer
+### ✨ AI Engineer | Generative AI Researcher | Agentic Systems Builder
 
 <kbd>My space on the web</kbd> showcasing modern web development with stunning dark aesthetics
 
@@ -31,10 +31,10 @@
 
 ## 🎯 Overview
 
-A modern, responsive portfolio website built with **Next.js 15** and **React 19**, featuring stunning dark aesthetics and smooth animations. This project showcases advanced web development practices with a focus on performance, accessibility, and user experience.
+A modern, responsive portfolio website built with **Next.js 15** and **React 19**, featuring dark, glassmorphism-inspired visuals and motion-rich storytelling. The site highlights AI research, generative systems, and full-stack engineering work with a focus on performance, accessibility, and UX polish.
 
-**🌐 Live Demo:** [aarab.vercel.app](https://aarab.vercel.app)
-**📱 GitHub:** [github.com/aarabii/An](https://github.com/aarabii/An)
+**🌐 Live Demo:** Coming soon
+**📱 GitHub:** [github.com/sky1502/portfolio](https://github.com/sky1502/portfolio)
 
 ## ✨ Features
 
@@ -44,7 +44,7 @@ A modern, responsive portfolio website built with **Next.js 15** and **React 19*
 | ⚡ **Performance Optimized** | Next.js 15 with Turbopack for lightning-fast builds     |
 | 📱 **Fully Responsive**      | Seamless experience across all device sizes             |
 | 🎭 **Smooth Animations**     | Motion-powered interactions and transitions             |
-| 📧 **Contact System**        | Integrated email functionality with React Email         |
+| 📬 **Direct Contact**        | Smart call-to-action with one-click email and maps      |
 | 🔍 **SEO Optimized**         | Complete meta tags, sitemap, robots.txt                 |
 | 🛡️ **Security Headers**      | Enhanced security with proper headers configuration     |
 | 📄 **PDF Resume**            | Integrated resume viewer with error boundaries          |
@@ -129,8 +129,8 @@ A modern, responsive portfolio website built with **Next.js 15** and **React 19*
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/aarabii/An.git
-   cd An
+   git clone https://github.com/sky1502/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies**
@@ -212,13 +212,12 @@ export const selfData = {
 
 <div align="center">
 
-| Platform         | Username                                                    | Link                         |
-| ---------------- | ----------------------------------------------------------- | ---------------------------- |
-| 🐙 **GitHub**    | [@aarabii](https://github.com/aarabii)                      | `https://github.com/aarabii` |
-| 💼 **LinkedIn**  | [Aarab Nishchal](https://linkedin.com/in/aarab-nishchal)    | Professional Network         |
-| 📸 **Instagram** | [@aarab.ii](https://instagram.com/aarab.ii)                 | Creative Updates             |
-| 🐦 **Twitter**   | [@aarab_ii](https://twitter.com/aarab_ii)                   | Tech Thoughts                |
-| 📧 **Email**     | [aarab.nishchal@gmail.com](mailto:aarab.nishchal@gmail.com) | Direct Contact               |
+| Platform        | Username                                                          | Link                          |
+| --------------- | ----------------------------------------------------------------- | ----------------------------- |
+| 🐙 **GitHub**   | [@sky1502](https://github.com/sky1502)                            | `https://github.com/sky1502`  |
+| 💼 **LinkedIn** | [Gagan Singhal](https://linkedin.com/in/gagansinghal06)          | Professional Network          |
+| 🧠 **LeetCode** | [@sky1502](https://leetcode.com/u/sky1502)                       | Algorithm Practice            |
+| 📧 **Email**    | [Gagansinghal06@gmail.com](mailto:Gagansinghal06@gmail.com)      | Direct Contact                |
 
 </div>
 
@@ -226,10 +225,10 @@ export const selfData = {
 
 <div align="center">
 
-**Built with ❤️ by [Aarab Nishchal](https://aarab.vercel.app)**
+**Built with ❤️ by [Gagan Singhal](https://linkedin.com/in/gagansinghal06)**
 
-_Student Developer | Chief Problem Solver | Solution Sorcerer_
+_AI Engineer | Generative Systems Builder | Curious Researcher_
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-aarab.vercel.app-9333ea?style=for-the-badge)](https://aarab.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-coming%20soon-9333ea?style=for-the-badge)](https://github.com/sky1502/portfolio)
 
 </div>

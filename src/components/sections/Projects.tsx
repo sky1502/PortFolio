@@ -92,6 +92,8 @@ export const Projects = () => {
               github={proj.github_link}
               demo={proj.demo}
               tech={proj.tech}
+              titleColor={proj.titleColor}
+              titleOutlineColor={proj.titleOutlineColor}
             />
           ))}
         </motion.div>

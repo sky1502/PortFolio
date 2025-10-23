@@ -9,7 +9,7 @@ import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 
 import { selfData } from "@/constant";
 import { nasalization } from "@/app/fonts";
-import { ContactFormCard, ContactSocials } from "@/components/Cards";
+import { ContactSocials } from "@/components/Cards";
 
 export const Contact = () => {
   const ref = useRef(null);
@@ -38,43 +38,47 @@ export const Contact = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Contact Form */}
-          <ContactFormCard />
+        <div className="max-w-3xl mx-auto space-y-12">
+          <motion.p
+            className="text-base md:text-lg text-muted-foreground leading-relaxed text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Prefer a direct reach-out? Drop me a line or connect on the platforms
+            below—no forms, just a quick hello.
+          </motion.p>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            {/* Contact List */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="space-y-4"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="space-y-4"
+          >
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-6 font-mono text-center md:text-left"
+              style={{ color: "hsl(var(--foreground))" }}
             >
-              <h3
-                className="text-xl md:text-2xl font-semibold mb-6 font-mono"
-                style={{ color: "hsl(var(--foreground))" }}
-              >
-                Get In Touch
-              </h3>
-              <ContactList />
-            </motion.div>
+              Get In Touch
+            </h3>
+            <ContactList />
+          </motion.div>
 
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-6 font-mono text-center md:text-left"
+              style={{ color: "hsl(var(--foreground))" }}
             >
-              <h3
-                className="text-xl md:text-2xl font-semibold mb-6 font-mono"
-                style={{ color: "hsl(var(--foreground))" }}
-              >
-                Socials . . .
-              </h3>
-              <ContactSocials />
-            </motion.div>
-          </div>
+              Socials
+            </h3>
+            <ContactSocials />
+          </motion.div>
         </div>
       </div>
     </section>
@@ -122,8 +126,14 @@ const ContactItem: React.FC<ContactItemProps> = ({
   );
 
   if (href) {
+    const isExternal = href.startsWith("http");
     return (
-      <Link href={href} className="block">
+      <Link
+        href={href}
+        className="block"
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+      >
         {content}
       </Link>
     );
@@ -145,6 +155,7 @@ const ContactList = () => {
         icon={IoLocationOutline}
         label="Location"
         value={`${selfData.current_location.city}, ${selfData.current_location.state}, ${selfData.current_location.country}`}
+        href="https://www.google.com/maps/place/Boston+University+Center+for+Computing+and+Data+Sciences+(CDS)/@42.3498971,-71.105805,17z/data=!3m1!4b1!4m6!3m5!1s0x89e379d2933baeed:0x60e64b526f2cebed!8m2!3d42.3498971!4d-71.1032301!16s%2Fg%2F11twkq1k9x?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
       />
     </div>
   );

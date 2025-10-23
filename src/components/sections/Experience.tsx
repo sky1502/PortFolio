@@ -101,6 +101,8 @@ export function Experience() {
                 year={exp.year}
                 description={exp.description}
                 company={exp.company}
+                companyColor={exp.companyColor}
+                companyOutlineColor={exp.companyOutlineColor}
                 technologies={exp.technologies}
                 index={index}
               />

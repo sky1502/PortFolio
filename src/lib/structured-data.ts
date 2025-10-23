@@ -34,10 +34,10 @@ export function generateWebsiteStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Aarab Nishchal - Portfolio",
+    name: "Gagan Singhal - Portfolio",
     url: "https://aarab.vercel.app",
     description:
-      "Aarab Nishchal's portfolio featuring projects in React, Next.js, and modern web development",
+      "Gagan Singhal's portfolio featuring projects in React, Next.js, and modern web development",
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -70,8 +70,6 @@ export function generateOrganizationStructuredData() {
     sameAs: [
       `https://github.com/${selfData.socials_username.github}`,
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
-      `https://twitter.com/${selfData.socials_username.twitter}`,
-      `https://instagram.com/${selfData.socials_username.instagram}`,
     ],
   };
 }
@@ -80,9 +78,9 @@ export function generateResumeStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "DigitalDocument",
-    name: "Aarab Nishchal Resume",
+    name: "Gagan Singhal Resume",
     description:
-      "Professional resume of Aarab Nishchal - Student Developer specializing in Full-Stack Web Development",
+      "Professional resume of Gagan Singhal - AI Engineer passionate about making machines humane",
     url: "https://aarab.vercel.app/resume",
     author: {
       "@type": "Person",
@@ -109,17 +107,21 @@ export function generateResumeStructuredData() {
     contentUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
     downloadUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
     keywords: [
-      "Software Developer",
+      "AI Engineer",
+      "Generative AI Researcher",
+      "Machine Learning Engineer",
+      "Multimodal AI",
+      "Computer Vision",
+      "Graduate Researcher",
+      "Boston University",
+      "Boston MA",
+      "United States",
+      "LangGraph Developer",
+      "LLM Applications",
+      "Next.js Engineer",
       "Full Stack Developer",
-      "React Developer",
-      "Next.js Developer",
-      "JavaScript Developer",
-      "TypeScript Developer",
-      "Student Developer",
-      "Computer Science",
-      "KIIT University",
-      "Bhubaneswar",
-      "India",
+      "Python Developer",
+      "Agentic AI Systems",
     ],
   };
 }

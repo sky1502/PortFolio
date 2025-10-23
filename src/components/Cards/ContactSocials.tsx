@@ -21,16 +21,6 @@ export const ContactSocials = () => {
       initial: 10,
     },
     {
-      Icon: PiTelegramLogo,
-      link: `https://t.me/${selfData.socials_username.telegram}`,
-      initial: -10,
-    },
-    {
-      Icon: FaTwitter,
-      link: `https://twitter.com/${selfData.socials_username.twitter}`,
-      initial: 10,
-    },
-    {
       Icon: SiLeetcode,
       link: `https://leetcode.com/${selfData.socials_username.leetcode}`,
       initial: -10,
