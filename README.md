@@ -227,6 +227,6 @@ export const selfData = {
 
 **Designed by [Aarab Nishchal](https://github.com/aarabii/)**
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-coming%20soon-9333ea?style=for-the-badge)](https://github.com/sky1502/portfolio)
+[![Portfolio]](https://github.com/sky1502/portfolio)
 
 </div>
