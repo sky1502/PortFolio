@@ -225,9 +225,7 @@ export const selfData = {
 
 <div align="center">
 
-**Built with ❤️ by [Gagan Singhal](https://linkedin.com/in/gagansinghal06)**
-
-_AI Engineer | Generative Systems Builder | Curious Researcher_
+**Designed by [Aarab Nishchal](https://github.com/aarabii/)**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-coming%20soon-9333ea?style=for-the-badge)](https://github.com/sky1502/portfolio)
 
