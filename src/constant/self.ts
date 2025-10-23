@@ -28,7 +28,7 @@ export const selfData = {
     "Project Finisher",
   ],
   desc: "I teach machines to make sense of the world.",
-  bio: "I work at the intersection of AI and human behavior, building intelligent syatems that turn data into decisions and ideas into tools.",
+  bio: "I work at the intersection of AI and human behavior, building intelligent systems that turn data into decisions and ideas into tools.",
   about: [
     "Hi, I'm Gagan, a developer and AI researcher interested in how code can learn, adapt, and make sense of the real world. I like breaking systems just enough to understand how they think.",
     "Most of my work lives at the edge of data and design — building intelligent agents, generative models, and web tools that blur the line between automation and creativity.",
