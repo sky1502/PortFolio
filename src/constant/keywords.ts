@@ -3,7 +3,7 @@ export const keywords = [
   "Gagan",
   "Singhal",
   "sky1502", // GitHub username
-  "aarab.vercel.app", // Portfolio URL
+  "gagans.vercel.app", // Portfolio URL
   "gagansinghal06@gmail.com", // Email for search
   "linkedin/in/gagansinghal06", // LinkedIn profile
   "Gagan Singhal portfolio",

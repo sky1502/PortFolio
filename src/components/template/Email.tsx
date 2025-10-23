@@ -52,7 +52,7 @@ export function EmailTemplate({
             <Row>
               <Column style={{ width: "40px" }}>
                 <Img
-                  src="https://raw.githubusercontent.com/aarabii/An/refs/heads/master/public/images/logo.png"
+                  src="https://raw.githubusercontent.com/sky1502/PortFolio/refs/heads/master/public/images/logo.png"
                   alt="AN"
                   width="40"
                   height="40"

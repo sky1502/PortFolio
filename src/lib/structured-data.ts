@@ -23,7 +23,7 @@ export function generatePersonStructuredData() {
       `https://github.com/${selfData.socials_username.github}`,
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
     ],
-    url: "https://aarab.vercel.app",
+    url: "https://gagans.vercel.app",
     description: selfData.bio,
   };
 }
@@ -33,7 +33,7 @@ export function generateWebsiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Gagan Singhal - Portfolio",
-    url: "https://aarab.vercel.app",
+    url: "https://gagans.vercel.app",
     description:
       "Gagan Singhal's portfolio featuring projects in React, Next.js, and modern web development",
     author: {
@@ -58,8 +58,8 @@ export function generateOrganizationStructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: selfData.name,
-    url: "https://aarab.vercel.app",
-    logo: "https://aarab.vercel.app/images/logo.png",
+    url: "https://gagans.vercel.app",
+    logo: "https://gagans.vercel.app/images/logo.png",
     description: selfData.bio,
     founder: {
       "@type": "Person",
@@ -79,7 +79,7 @@ export function generateResumeStructuredData() {
     name: "Gagan Singhal Resume",
     description:
       "Professional resume of Gagan Singhal - AI Engineer passionate about making machines humane",
-    url: "https://aarab.vercel.app/resume",
+    url: "https://gagans.vercel.app/resume",
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -102,8 +102,8 @@ export function generateResumeStructuredData() {
     },
     dateModified: new Date().toISOString(),
     fileFormat: "application/pdf",
-    contentUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
-    downloadUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
+    contentUrl: "https://gagans.vercel.app/docs/MyResume.pdf",
+    downloadUrl: "https://gagans.vercel.app/docs/MyResume.pdf",
     keywords: [
       "AI Engineer",
       "Generative AI Researcher",

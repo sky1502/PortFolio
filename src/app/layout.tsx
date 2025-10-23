@@ -23,17 +23,17 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Gagan Singhal",
-      url: "https://aarab.vercel.app",
+      url: "https://gagans.vercel.app",
     },
   ],
   creator: "Gagan Singhal",
   referrer: "origin-when-cross-origin",
   keywords: keywords,
-  metadataBase: new URL("https://aarab.vercel.app"),
+  metadataBase: new URL("https://gagans.vercel.app"),
 
   // SEO Enhancements
   alternates: {
-    canonical: "https://aarab.vercel.app",
+    canonical: "https://gagans.vercel.app",
   },
   icons: {
     icon: [
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Gagan Singhal",
     description:
       "Explore Gagan Singhal’s portfolio featuring projects in AI, generative systems, and full-stack development. Discover intelligent tools, creative experiments, and real-world applications built at the intersection of code and curiosity.",
-    url: "https://aarab.vercel.app",
+    url: "https://gagans.vercel.app",
     siteName: "Gagan Singhal",
     images: [
       {

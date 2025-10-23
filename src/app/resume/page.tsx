@@ -405,7 +405,7 @@ export default function Resume() {
 
               <motion.a
                 href={PDF_URL}
-                download="Aarab_Nishchal_Resume.pdf"
+                download="Gagan_Singhal_Resume.pdf"
                 className="group relative flex items-center gap-2 px-6 py-3 rounded-xl overflow-hidden transition-all duration-300 font-medium text-white"
                 style={{
                   background:
@@ -572,7 +572,7 @@ export default function Resume() {
                       </motion.a>
                       <motion.a
                         href={PDF_URL}
-                        download="Aarab_Nishchal_Resume.pdf"
+                        download="Gagan_Singhal_Resume.pdf"
                         className="flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/90 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}

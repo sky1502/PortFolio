@@ -3,11 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     unoptimized: false, // Keep image optimization enabled
-    // domains: ["aarab.vercel.app"],
+    // domains: ["gagans.vercel.app"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "aarab.vercel.app",
+        hostname: "gagans.vercel.app",
         port: "",
         pathname: "/**",
       },
@@ -70,22 +70,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/email",
-        destination: "mailto:aarab.nishchal@gmail.com",
+        destination: "mailto:gagansinghal06@gmail.com",
         permanent: true,
       },
       {
         source: "/directresume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/Gagan_Singhal_Resume.pdf",
         permanent: true,
       },
       {
         source: "/direct-resume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/Gagan_Singhal_Resume.pdf",
         permanent: true,
       },
       {
         source: "/github",
-        destination: "www.github.com/aarabii",
+        destination: "www.github.com/sky1502",
         permanent: true,
       },
     ];

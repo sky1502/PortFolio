@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Resume - Gagan Singhal",
     description:
       "View and download Gagan Singhal's professional resume featuring his experience and skills as a student developer.",
-    url: "https://aarab.vercel.app/resume",
+    url: "https://gagans.vercel.app/resume",
     siteName: "Gagan Singhal",
     images: [
       {
